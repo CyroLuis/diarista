@@ -35,13 +35,12 @@ public class Principal {
         var diarista = new Diarista(nome,telefone,cpf,endereco);
 
         repository.cadastrar(diarista);
-        System.out.println("Cadastro feito com sucesso!!");
     }
 
     private static void listarDiaristas(DiaristaRepository repository) {
         var diaristas = repository.buscarTodos();
-        for (Diarista diarista: diaristas){
-            System.out.println(diarista.getId() + " - " + diarista.getNome());
+        for (Diarista d: diaristas){
+            System.out.println(d.getId() + " - " + d.getNome());
         }
     }
 

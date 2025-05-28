@@ -13,6 +13,7 @@ public class DiaristaRepository implements IRepository<Diarista, Long> {
 
     public DiaristaRepository() {
         diaristas = new ArrayList<>();
+       // diaristas.add(new Diarista(1L,"Cyro","3424355","2313","rua d"));
         idAtual = 1L;
     }
 
@@ -24,6 +25,7 @@ public class DiaristaRepository implements IRepository<Diarista, Long> {
     @Override
     public Diarista cadastrar(Diarista model) {
         model.setId(idAtual);
+        diaristas.add(model);
         idAtual++;
         return model;
     }
